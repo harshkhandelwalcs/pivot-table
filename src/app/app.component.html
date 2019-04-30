@@ -1,0 +1,19 @@
+<!-- The content below is only a placeholder and can be replaced. -->
+<div style="text-align:center">
+    <h1>Welcome to {{ title }}!</h1>
+</div>
+<input
+    type="file"
+    (change)="handleFileSelect($event)">
+<ejs-pivotview
+    *ngIf="showTable"
+    #pivotview
+    id='PivotView'
+    [dataSource]=dataSource
+    [width]=width
+    [height]=height
+    showGroupingBar='true'
+    showFieldList='true'
+    allowCalculatedField='true'
+    allowConditionalFormatting='true'>
+</ejs-pivotview>
